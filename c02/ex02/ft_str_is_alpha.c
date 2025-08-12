@@ -25,7 +25,7 @@ int	ft_str_is_alpha(char *str)
 	return (1);
 }
 
-
+/*
 void test_case(char *input, int expected)
 {
     int result = ft_str_is_alpha(input);
@@ -52,4 +52,4 @@ int main(void)
     test_case("Tab\tChar", 0);          // Contains tab
 
     return 0;
-}
+}*/

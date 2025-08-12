@@ -26,7 +26,7 @@ char	*ft_strupcase(char *str)
 	return (original);
 }
 
-int main(void)
+/*int main(void)
 {
     char str1[] = "hello world!";
     char str2[] = "already uppercase";
@@ -43,4 +43,4 @@ int main(void)
 	 ft_strupcase(str4));
 
     return 0;
-}
+}*/

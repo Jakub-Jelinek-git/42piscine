@@ -31,6 +31,7 @@ char	*ft_strncpy(char *dest, char *src, unsigned int n)
 	return (dest);
 }
 
+/*
 // Helper function to print bytes including nulls
 void print_buffer(char *label, char *buf, unsigned int n) {
     printf("%s: \"", label);
@@ -45,14 +46,8 @@ void print_buffer(char *label, char *buf, unsigned int n) {
 
 int main(void)
 {
-
-	char dest [] = "Ahoj";
-	char source [] = "ahojvole";
-	int n = 20;
-	ft_strncpy(dest, source, n);
-	printf("%s", dest);
     char src1[] = "Hello, world!";
-    char src2[] = "Shortpppppppppppp";
+    char src2[] = "Short";
     char src3[] = "";
 
     char dest1[20];
@@ -99,4 +94,4 @@ int main(void)
     printf("\n");
 
     return 0;
-}
+}*/

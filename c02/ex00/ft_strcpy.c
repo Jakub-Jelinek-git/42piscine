@@ -27,7 +27,7 @@ char	*ft_strcpy(char *dest, char *src)
 	return (dest_original);
 }
 
-int main(void)
+/*int main(void)
 {
 	char source[] = "42 Network";
 	char destination[100];
@@ -38,4 +38,4 @@ int main(void)
 	printf("Returned pointer points to: %s\n", result);
 
 	return 0;
-}
+}*/

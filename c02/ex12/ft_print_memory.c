@@ -101,7 +101,7 @@ void	print_3_column(unsigned char *address, int length)
 
 void	*ft_print_memory(void *addr, unsigned int size)
 {
-	unsigned int				currloop;
+	unsigned int	currloop;
 	unsigned char	*address;
 
 	currloop = 0;

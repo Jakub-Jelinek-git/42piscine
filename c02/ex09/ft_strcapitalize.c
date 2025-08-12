@@ -42,7 +42,7 @@ char	*ft_strcapitalize(char *str)
 	return (str);
 }
 
-int main(void) {
+/*int main(void) {
     char tests[][100] = {
         "",
         "   ;;; +++---===   ",
@@ -64,4 +64,4 @@ int main(void) {
     }
 
     return 0;
-}
+}*/

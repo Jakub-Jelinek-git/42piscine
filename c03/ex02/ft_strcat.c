@@ -1,8 +1,20 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strcat.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: jjelinek <jjelinek@student.42prague.c      +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2025/08/12 10:21:51 by jjelinek          #+#    #+#             */
+/*   Updated: 2025/08/12 10:21:53 by jjelinek         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include <stdio.h>
 #include <string.h>
 #include <unistd.h>
 
-char *ft_strcat(char *dest, char *src)
+char	*ft_strcat(char *dest, char *src)
 {
 	char	*origin_dest;
 
@@ -19,6 +31,7 @@ char *ft_strcat(char *dest, char *src)
 	return (origin_dest);
 }
 
+/*
 void reset_dest(char *dest, const char *src, size_t size) {
     memset(dest, 0, size);
     strcpy(dest, src);
@@ -54,4 +67,4 @@ int main(void) {
     run_test("Concat ", " with multiple calls", 100);
 
     return 0;
-}
+}*/
