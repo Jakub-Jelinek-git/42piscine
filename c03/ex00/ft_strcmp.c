@@ -14,22 +14,19 @@
 int	ft_strcmp(char *s1, char *s2)
 {
 	int	current;
-	int	value;
 
 	current = 0;
-	value = 0;
 	while (s1[current] || s2[current])
 	{
 		if (s1[current] != s2[current])
 			return ((int)((unsigned char)s1[current])
-				- (int)((unsigned char)s2[current]));
+			- (int)((unsigned char)s2[current]));
 		current++;
 	}
 	return (0);
 }
 
-/*
-int main(void)
+/*int main(void)
 {
 	printf("Test 1: %d\n", ft_strcmp("hello", "hello")); //  0
 	printf("Test 2: %d\n", ft_strcmp("abc", "abd")); // negative
