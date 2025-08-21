@@ -6,7 +6,7 @@
 /*   By: jjelinek <jjelinek@student.42prague.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/20 14:14:25 by jjelinek          #+#    #+#             */
-/*   Updated: 2025/08/20 14:38:26 by jjelinek         ###   ########.fr       */
+/*   Updated: 2025/08/21 19:53:45 by jjelinek         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ typedef int	t_bool;
 # define TRUE 1
 # define FALSE 0
 # define SUCCESS 0
-# define EVEN_MSG "I have an even number of arguments."
-# define ODD_MSG "I have an odd number of argumens."
+# define EVEN_MSG "I have an even number of arguments.\n"
+# define ODD_MSG "I have an odd number of arguments.\n"
 
 #endif
