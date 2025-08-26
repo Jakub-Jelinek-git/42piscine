@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_cat.c                                           :+:      :+:    :+:   */
+/*   helper_fns.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jjelinek <jjelinek@student.42prague.com    +#+  +:+       +#+        */
+/*   By: jjelinek <jjelinek@student.42prague.c      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/08/25 14:06:50 by jjelinek          #+#    #+#             */
-/*   Updated: 2025/08/26 11:15:31 by jjelinek         ###   ########.fr       */
+/*   Created: 2025/08/26 15:57:00 by jjelinek          #+#    #+#             */
+/*   Updated: 2025/08/26 15:57:01 by jjelinek         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,13 +18,14 @@ void	put_str(int fd, char *str)
 		write(fd, str++, 1);
 }
 
-void	error(char *filename)
+void	*error(char *filename)
 {
-	put_str(2, "cat: ");
+	put_str(2, "tail: cannot open '");
 	put_str(2, basename(filename));
-	put_str(2, ": ");
+	put_str(2, "' for reading: ");
 	put_str(2, strerror(errno));
 	put_str(2, "\n");
+	return (NULL);
 }
 
 void	display(int fd)
@@ -40,27 +41,22 @@ void	display(int fd)
 	}
 }
 
-int	main(int argc, char **argv)
+int	get_byte_size(char *size_s)
 {
-	int		i;
-	int		fd;
+	int	size;
 
-	i = 1;
-	if (argc == 1)
-		display(0);
-	else
+	size = 0;
+	while (*size_s)
 	{
-		while (argv[i++])
-		{
-			fd = open(argv[i - 1], O_RDONLY);
-			if (fd < 0)
-			{
-				error(argv[i - 1]);
-				continue ;
-			}
-			display(fd);
-			close(fd);
-		}
+		size = size * 10 + (*size_s - '0');
+		size_s++;
 	}
-	return (0);
+	return (size);
+}
+
+void	header(char *filename)
+{
+	put_str(1, "==> ");
+	put_str(1, basename(filename));
+	put_str(1, " <==\n");
 }
