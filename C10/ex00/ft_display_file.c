@@ -6,7 +6,7 @@
 /*   By: jjelinek <jjelinek@student.42prague.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/25 11:35:29 by jjelinek          #+#    #+#             */
-/*   Updated: 2025/08/25 13:14:29 by jjelinek         ###   ########.fr       */
+/*   Updated: 2025/08/27 14:29:50 by jjelinek         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,10 +39,10 @@ int	main(int argc, char **argv)
 	fd = open(argv[1], O_RDONLY);
 	if (fd < 0)
 	{
-		put_str(2, "Cannot read file\n");
+		put_str(2, "Cannot read file.\n");
 		return (1);
 	}
-	while((n_read = read(fd, buf, BUF_SIZE)) > 0)
+	while ((n_read = read(fd, buf, BUF_SIZE)) > 0)
 		write(1, buf, n_read);
 	close(fd);
 	return (0);

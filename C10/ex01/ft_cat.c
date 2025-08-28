@@ -6,7 +6,7 @@
 /*   By: jjelinek <jjelinek@student.42prague.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/25 14:06:50 by jjelinek          #+#    #+#             */
-/*   Updated: 2025/08/26 11:15:31 by jjelinek         ###   ########.fr       */
+/*   Updated: 2025/08/27 13:02:40 by jjelinek         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,12 +54,12 @@ int	main(int argc, char **argv)
 		{
 			fd = open(argv[i - 1], O_RDONLY);
 			if (fd < 0)
-			{
 				error(argv[i - 1]);
-				continue ;
+			else
+			{
+				display(fd);
+				close(fd);
 			}
-			display(fd);
-			close(fd);
 		}
 	}
 	return (0);

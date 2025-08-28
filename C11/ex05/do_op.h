@@ -6,12 +6,14 @@
 /*   By: jjelinek <jjelinek@student.42prague.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/27 19:04:14 by jjelinek          #+#    #+#             */
-/*   Updated: 2025/08/27 19:11:11 by jjelinek         ###   ########.fr       */
+/*   Updated: 2025/08/28 13:08:23 by jjelinek         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef DO_OP_H
 # define DO_OP_H
+
+# include <unistd.h>
 
 int		ft_atoi(char *str);
 void	ft_putnbr(int n);

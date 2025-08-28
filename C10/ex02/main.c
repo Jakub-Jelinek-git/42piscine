@@ -6,7 +6,7 @@
 /*   By: jjelinek <jjelinek@student.42prague.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/26 11:38:28 by jjelinek          #+#    #+#             */
-/*   Updated: 2025/08/26 15:57:36 by jjelinek         ###   ########.fr       */
+/*   Updated: 2025/08/27 14:18:38 by jjelinek         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -65,7 +65,6 @@ char	*get_file_content(char	*filename)
 	close(fd);
 	return (file);
 }
-
 int	tail(char *filename, char *size_c)
 {
 	char	*file;
@@ -84,7 +83,6 @@ int	tail(char *filename, char *size_c)
 	if (start < 0)
 		start = 0;
 	put_str(1, file + start);
-	put_str(1, "\n");
 	free(file);
 	return (0);
 }
@@ -96,7 +94,7 @@ int	main(int argc, char **argv)
 	i = 3;
 	if (argc == 3
 		&& argv[1][0] == '-' && argv[1][1] == 'c')
-		display(0);
+		display(get_byte_size(argv[2]));
 	else if (argc > 3 && argv[1][0] == '-' && argv[1][1] == 'c')
 	{
 		while (argv[i])
